@@ -1,0 +1,25 @@
+{% extends "./layout.html" %}
+
+{% block title %}
+{{data.titulo}}
+{% endblock %}
+
+{% block body %}
+
+<!-- Para imprimir todos los datos -->
+<h2>Mostrar todos los datos:</h2>
+<p>{{data.pacientes}}</p>
+
+<!-- Para imprimir todos los datos de cada uno de los pacientes -->
+<h2>Mostrar todos los datos de cada uno de los pacientes:</h2>
+{% for paciente in data.pacientes %}
+<p>{{paciente}}</p>
+{% endfor %}
+
+<h2>Mostrar el nombre de los pacientes:</h2>
+<!-- Para imprimir el nombre de los pacientes -->
+{% for paciente in data.pacientes %}
+<p>{{paciente[1]}}</p>
+{% endfor %}
+
+{% endblock %}
